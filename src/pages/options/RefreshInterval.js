@@ -8,19 +8,27 @@ function RefreshInterval() {
   const { posts, isLoading, isError } = usePosts(1000);
 
   const renderCount = useRef(1);
-  console.log("렌더링 수 RefreshInterval:", renderCount.current);
+  console.log("렌더링 횟수: RefreshInterval:", renderCount.current);
 
   useEffect(() => {
     renderCount.current = renderCount.current + 1;
-    console.log("렌더링 수 useEffect:", renderCount.current);
+    console.log("렌더링 횟수: useEffect:", renderCount.current);
   });
 
-  if (isError) return "An error has occurred.";
-  if (isLoading) return "Loading...";
+  console.log("렌더링 횟수: before loading:", renderCount.current);
 
-  console.log("렌더링 수 RefreshInterval:", renderCount.current);
+  if (isError) {
+    console.log("렌더링 횟수: error");
+    return "An error has occurred.";
+  }
+  if (isLoading) {
+    console.log("렌더링 횟수: isLoading");
+    return "Loading...";
+  }
 
-  console.log("return");
+  console.log("렌더링 횟수: after loading:", renderCount.current);
+
+  console.log("렌더링 횟수: render component");
   return (
     <>
       <HyperLink href="https://swr.vercel.app/ko/docs/revalidation#%EC%9D%B8%ED%84%B0%EB%B2%8C-%EC%8B%9C%EC%97%90-%EA%B0%B1%EC%8B%A0%ED%95%98%EA%B8%B0" />
