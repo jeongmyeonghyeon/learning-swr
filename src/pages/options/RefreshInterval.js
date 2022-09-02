@@ -15,7 +15,7 @@ function RefreshInterval() {
   return (
     <>
       <SecondaryTitle>[Output 😎]</SecondaryTitle>
-      <img src={sc} alt="screenshot00" width={400} />
+      <img src={sc} alt="screenshot00" width={800} />
       <Ul>
         {posts?.map(({ id, title, body }) => (
           <Li key={id}>
