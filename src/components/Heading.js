@@ -8,7 +8,7 @@ function Heading({ children }) {
   return (
     <Base>
       <Nav>
-        <div onClick={() => navigate(-1)}>🏡 Home</div>
+        <div onClick={() => navigate("/")}>🏡 Home</div>
         <div onClick={() => navigate(-1)}>🔙 Back to the previous</div>
       </Nav>
       <h1>{children}</h1>
