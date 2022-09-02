@@ -1,15 +1,17 @@
 import ReactSyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import styled from "styled-components";
 
 function SyntaxHighlighter({ children }) {
   return (
-    <ReactSyntaxHighlighter
-      language="javascript"
-      style={{ ...docco, textAlign: "left" }}
-    >
+    <StyledReactSyntaxHighlighter language="javascript" style={docco}>
       {children}
-    </ReactSyntaxHighlighter>
+    </StyledReactSyntaxHighlighter>
   );
 }
+
+const StyledReactSyntaxHighlighter = styled(ReactSyntaxHighlighter)`
+  text-align: left;
+`;
 
 export default SyntaxHighlighter;
