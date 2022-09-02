@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/learning-swr/static/css/main.0584d9fa.css",
-    "main.js": "/learning-swr/static/js/main.53d58e0d.js",
+    "main.js": "/learning-swr/static/js/main.b7ac1013.js",
     "static/js/787.7d9f1352.chunk.js": "/learning-swr/static/js/787.7d9f1352.chunk.js",
     "static/media/screenshot00.png": "/learning-swr/static/media/screenshot00.4a1b974dbab4bcd10fca.png",
     "index.html": "/learning-swr/index.html",
     "main.0584d9fa.css.map": "/learning-swr/static/css/main.0584d9fa.css.map",
-    "main.53d58e0d.js.map": "/learning-swr/static/js/main.53d58e0d.js.map",
+    "main.b7ac1013.js.map": "/learning-swr/static/js/main.b7ac1013.js.map",
     "787.7d9f1352.chunk.js.map": "/learning-swr/static/js/787.7d9f1352.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0584d9fa.css",
-    "static/js/main.53d58e0d.js"
+    "static/js/main.b7ac1013.js"
   ]
 }
