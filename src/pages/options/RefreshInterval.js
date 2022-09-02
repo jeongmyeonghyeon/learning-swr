@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import usePosts from "../../hooks/apis/usePost";
 import sc from "../../assets/img/screenshot00.png";
@@ -6,11 +6,21 @@ import HyperLink from "../../components/HyperLink";
 
 function RefreshInterval() {
   const { posts, isLoading, isError } = usePosts(1000);
-  const [count, setCount] = useState(0);
+
+  const renderCount = useRef(1);
+  console.log("렌더링 수 RefreshInterval:", renderCount.current);
+
+  useEffect(() => {
+    renderCount.current = renderCount.current + 1;
+    console.log("렌더링 수 useEffect:", renderCount.current);
+  });
 
   if (isError) return "An error has occurred.";
   if (isLoading) return "Loading...";
 
+  console.log("렌더링 수 RefreshInterval:", renderCount.current);
+
+  console.log("return");
   return (
     <>
       <HyperLink href="https://swr.vercel.app/ko/docs/revalidation#%EC%9D%B8%ED%84%B0%EB%B2%8C-%EC%8B%9C%EC%97%90-%EA%B0%B1%EC%8B%A0%ED%95%98%EA%B8%B0" />
