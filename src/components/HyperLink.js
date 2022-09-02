@@ -5,7 +5,7 @@ function HyperLink({ href }) {
   return (
     <Base>
       <a href={href} target="_blank" rel="noreferrer">
-        {href}
+        {decodeURI(href)}
       </a>
     </Base>
   );

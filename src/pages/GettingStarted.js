@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Nav from "../components/Nav";
 import Heading from "../components/Heading";
 import usePosts from "../hooks/apis/usePost";
 
@@ -42,7 +43,8 @@ function GettingStarted() {
 
   return (
     <>
-      <Heading>Getting Started</Heading>
+      <Nav />
+      <Heading />
       <HyperLink href="https://swr.vercel.app/ko/docs/getting-started" />
       <SyntaxHighlighter>{codeString}</SyntaxHighlighter>
       <SecondaryTitle>[Output 😎]</SecondaryTitle>

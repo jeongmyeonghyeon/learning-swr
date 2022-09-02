@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ReactRouterLink from "../components/ReactRouterLink";
 
 function Home() {
   return (
@@ -8,14 +8,10 @@ function Home() {
       <hr />
       <ul>
         <li>
-          <Link to="/getting-started">
-            <h3>Getting Started</h3>
-          </Link>
+          <ReactRouterLink to="/getting-started" />
         </li>
         <li>
-          <Link to="/options">
-            <h3>Options</h3>
-          </Link>
+          <ReactRouterLink to="/options" />
         </li>
       </ul>
     </>

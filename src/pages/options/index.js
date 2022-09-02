@@ -1,24 +1,15 @@
 import React from "react";
-import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
+import Nav from "../../components/Nav";
 import Heading from "../../components/Heading";
+import ReactRouterLink from "../../components/ReactRouterLink";
 
 function Options() {
-  const location = useLocation();
-  let title = "";
-
-  switch (location.pathname) {
-    case "/options/refreshInterval":
-      title = "인터벌 시에 갱신하기(refreshInterval)";
-      break;
-    default:
-      title = "Options";
-      break;
-  }
-
   return (
     <>
-      <Heading>{title}</Heading>
+      <Nav />
+      <Heading />
       <Outlet />
     </>
   );
@@ -29,9 +20,7 @@ function Option() {
     <>
       <Ul>
         <Li>
-          <Link to="/options/refreshInterval">
-            <h3>인터벌 지정 새로고침(refreshInterval)</h3>
-          </Link>
+          <ReactRouterLink to="/options/refreshInterval" />
         </Li>
       </Ul>
     </>
