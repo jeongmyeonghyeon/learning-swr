@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Heading from "../components/Heading";
 import usePosts from "../hooks/apis/usePost";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 import HyperLink from "../components/HyperLink";
+import SyntaxHighlighter from "../components/SyntaxHighlighter";
 
 function GettingStarted() {
   const { posts, isLoading, isError } = usePosts();
@@ -44,29 +44,23 @@ function GettingStarted() {
     <>
       <Heading>Getting Started</Heading>
       <HyperLink href="https://swr.vercel.app/ko/docs/getting-started" />
-      <StyledSyntaxHighlighter language="javascript" style={docco}>
-        {codeString}
-      </StyledSyntaxHighlighter>
+      <SyntaxHighlighter>{codeString}</SyntaxHighlighter>
       <SecondaryTitle>[Output 😎]</SecondaryTitle>
-      <PostList>
+      <Ul>
         {posts?.map(({ id, title, body }) => (
-          <Post key={id}>
+          <Li key={id}>
             <Title>{title}</Title>
             <Body>{body}</Body>
-          </Post>
+          </Li>
         ))}
-      </PostList>
+      </Ul>
     </>
   );
 }
 
-const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
-  text-align: left;
-`;
+const Ul = styled.ul``;
 
-const PostList = styled.ul``;
-
-const Post = styled.li`
+const Li = styled.li`
   text-align: left;
   :not(:first-of-type) {
     margin-top: 36px;

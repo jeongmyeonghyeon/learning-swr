@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #111111;
 }
 
 code {
@@ -14,4 +15,9 @@ code {
 
 li {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
 }

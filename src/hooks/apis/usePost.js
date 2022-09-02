@@ -1,8 +1,10 @@
 import useSWR from "swr";
 import fetcher from "../../lib/fetcher";
 
-function usePosts() {
-  const { data, error } = useSWR("/posts", fetcher);
+function usePosts(refreshInterval = false) {
+  const { data, error } = useSWR("/posts", fetcher, {
+    refreshInterval,
+  });
 
   return {
     posts: data,

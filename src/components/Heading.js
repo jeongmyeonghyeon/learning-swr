@@ -1,24 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 function Heading({ children }) {
+  const navigate = useNavigate();
+
   return (
     <Base>
-      <Link to="/">← Go back Index</Link>
-      <span>{children}</span>
+      <Nav>
+        <div onClick={() => navigate(-1)}>🏡 Home</div>
+        <div onClick={() => navigate(-1)}>🔙 Back to the previous</div>
+      </Nav>
+      <h1>{children}</h1>
     </Base>
   );
 }
 
-const Base = styled.h1`
+const Base = styled.div`
   position: relative;
+  margin: 0;
+`;
 
-  a {
-    position: absolute;
-    top: -15px;
-    left: 0;
-    font-size: 15px;
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #f0f1f2;
+  padding: 4px;
+
+  div:nth-of-type(2) {
+    margin-left: 12px;
   }
 `;
 
