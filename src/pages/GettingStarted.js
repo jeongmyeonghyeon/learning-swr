@@ -47,7 +47,7 @@ function GettingStarted() {
       <StyledSyntaxHighlighter language="javascript" style={docco}>
         {codeString}
       </StyledSyntaxHighlighter>
-      <SecondaryTitle>[Output]</SecondaryTitle>
+      <SecondaryTitle>[Output 😎]</SecondaryTitle>
       <PostList>
         {posts?.map(({ id, title, body }) => (
           <Post key={id}>
