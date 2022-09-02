@@ -2,4 +2,4 @@
 
 SWR 학습 내용 정리.
 
-[링크](https://jeongmyeonghyeon.github.io/learning-swr)
+<a href="https://jeongmyeonghyeon.github.io/learning-swr" target="_blank">링크</a>
