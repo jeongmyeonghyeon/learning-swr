@@ -30,7 +30,7 @@ function Option() {
       <Ul>
         <Li>
           <Link to="/options/refreshInterval">
-            <h3>인터벌 시에 갱신하기(refreshInterval)</h3>
+            <h3>인터벌 지정 새로고침(refreshInterval)</h3>
           </Link>
         </Li>
       </Ul>
